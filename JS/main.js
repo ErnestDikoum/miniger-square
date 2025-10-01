@@ -1,22 +1,12 @@
-const hostUrl = 'https://ger-square.netlify.app/A';
-
-function encodeForQr(u){ return encodeURIComponent(u); }
-
+// Générer le QR code
 function updateQr(){
-  const img = document.getElementById('qrImage');
-  const target = hostUrl || window.location.href;
-  img.src = qrUrl;
-  const qrImage = document.getElementById('qrImage');
-  const siteUrl = 'https://ger-square.netlify.app/'; 
-  const qrUrl = `https://chart.googleapis.com/chart?cht=qr&chs=1000x1000&chl=${encodeURIComponent(siteUrl)}&chld=L|1`;
-  qrImage.src = qrUrl;
-
+  const siteUrl = window.location.href; // ✅ Auto
+  const qrUrl = `https://chart.googleapis.com/chart?cht=qr&chs=800x800&chl=${encodeURIComponent(siteUrl)}&chld=L|1`;
+  document.getElementById('qrImage').src = qrUrl;
 }
-
 updateQr();
 
-
-// Carrousel fluide avec auto défilement et swipe
+// Carrousel
 const track = document.querySelector('.carousel-track');
 const slides = document.querySelectorAll('.carousel img');
 let index = 0;

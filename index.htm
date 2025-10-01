@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Ger-Square — Menu </title>
+  <title>Ger-Square — Menu</title>
+  <meta name="description" content="Menu du jour Ger-Square — Plats,menu gertrude, boissons et friandises. Scannez le QR pour consulter notre carte.">
   <link rel="stylesheet" href="CSS/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -18,11 +19,14 @@
         </div>
       </header>
 
+      <!-- Plat du jour -->
       <div class="dish-info">
-        <span class="dish-name">Poulet braisé avec des miondos en compléments, Régalez-vous !😋</span>
+        <span class="dish-name">Poulet braisé avec des miondos en compléments, régalez-vous ! 😋</span>
         <span class="dish-price">1 000 FCFA</span>
       </div>
-      <div class="carousel">
+
+      <!-- Carousel -->
+      <div class="carousel" id="carousel">
         <div class="carousel-track">
           <img src="Images/pp.jpeg" alt="Ambiance 1" class="active">
           <img src="Images/p.jpeg" alt="Ambiance 2">
@@ -32,19 +36,25 @@
 
       <main>
         <div class="menu">
-          
-
+          <!-- Boissons -->
           <div class="card">
-            <div class="section-title"><img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/8098896d-66bc-45e7-9f80-faef367cd6a7.__CR0,0,970,600_PT0_SX970_V1___.png" alt="Boisson">Boissons disponibles</div>
+            <div class="section-title">
+              <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/8098896d-66bc-45e7-9f80-faef367cd6a7.__CR0,0,970,600_PT0_SX970_V1___.png" alt="Boisson">
+              Boissons disponibles
+            </div>
             <ul class="items">
               <li><span class="item-label"><img src="https://mybusinessmag.info/wp-content/uploads/2022/07/CollageMaker_2022714124033839-1.jpg" alt="Brasseries/Guinness">Diverses boissons Brasseries/Guinness</span><span class="price">X FCFA</span></li>
-              <li><span class="item-label"><img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03" alt="Jus">Jus de fruit/foléré maison (50cl)</span><span class="price">100-200 FCFA</span></li>
-              <li><span class="item-label"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Soda">Menthe au lait (33cl)</span><span class="price">500 FCFA</span></li>
+              <li><span class="item-label"><img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03" alt="Jus">Jus de fruit/foléré maison (50cl)</span><span class="price">100–200 FCFA</span></li>
+              <li><span class="item-label"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Menthe au lait">Menthe au lait (33cl)</span><span class="price">500 FCFA</span></li>
             </ul>
           </div>
 
+          <!-- Friandises -->
           <div class="card">
-            <div class="section-title"><img src="https://th.bing.com/th/id/R.ac0903a6dcfa1334b898c5c1df5d8c41?rik=dnNEWdHL2qgCdA&pid=ImgRaw&r=0" alt="Friandise">Vos friandises & miniardises</div>
+            <div class="section-title">
+              <img src="https://th.bing.com/th/id/R.ac0903a6dcfa1334b898c5c1df5d8c41?rik=dnNEWdHL2qgCdA&pid=ImgRaw&r=0" alt="Friandise">
+              Vos friandises & miniardises
+            </div>
             <ul class="items">
               <li><span class="item-label"><img src="https://www.cuisinedecheznous.net/wp-content/uploads/2022/03/277309506_482361450104195_4460210452647136990_n.jpg" alt="Croquettes">Croquettes</span><span class="price">50 FCFA</span></li>
               <li><span class="item-label"><img src="https://bing.com/th?id=OSK.579e18049f24ade25895a70a2b4b3767" alt="Crêpes">Crêpes</span><span class="price">100 FCFA</span></li>
@@ -53,6 +63,7 @@
           </div>
         </div>
 
+        <!-- QR & Infos -->
         <div class="qr-sheet">
           <div class="qr-box">
             <img id="qrImage" alt="QR code vers le menu">
@@ -61,7 +72,8 @@
           <div style="flex:1">
             <div class="card">
               <div class="section-title">Infos</div>
-              <p>Adresse : Bocom Ndogpassi II, a 100m du collége NGASSI Douala — Tél : +237 696 294 224</p>
+              <p>Adresse : Bocom Ndogpassi II, à 100m du Collège NGASSI Douala</p>
+              <p>Tél : +237 696 294 224</p>
               <p>Horaires : 10:30 — 20:30</p>
               <p style="margin-block-start:12px;color:var(--muted)">Imprimez cette feuille au format A4 et découpez le QR pour le placer sur les tables.</p>
               <div style="margin-block-start:12px;display:flex;gap:8px">
@@ -70,17 +82,14 @@
             </div>
           </div>
         </div>
-
       </main>
 
       <footer>
-        <small style="color:var(--muted)">© Ger-Square ||| Contacter le développeur : +237 691 734 173</small>
+        <small>© Ger-Square ||| Contacter le développeur : +237 691 734 173</small>
       </footer>
     </div>
   </div>
-    <script src="JS/main.js" defer></script>
 
+  <script src="JS/main.js" defer></script>
 </body>
-
-
-  
+</html>
