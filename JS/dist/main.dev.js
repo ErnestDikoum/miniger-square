@@ -1,14 +1,23 @@
 "use strict";
 
 // Générer le QR code
-function updateQr() {
-  var siteUrl = window.location.href; // ✅ Auto
+document.addEventListener("DOMContentLoaded", function () {
+  var qrImage = document.getElementById("qrImage");
 
-  var qrUrl = "https://chart.googleapis.com/chart?cht=qr&chs=800x800&chl=".concat(encodeURIComponent(siteUrl), "&chld=L|1");
-  document.getElementById('qrImage').src = qrUrl;
-}
+  if (qrImage) {
+    var siteUrl = window.location.href;
+    QRCode.toDataURL(siteUrl, {
+      width: 250
+    }, function (err, url) {
+      if (err) {
+        console.error(err);
+        return;
+      }
 
-updateQr(); // Carrousel
+      qrImage.src = url;
+    });
+  }
+}); // Carrousel
 
 var track = document.querySelector('.carousel-track');
 var slides = document.querySelectorAll('.carousel img');

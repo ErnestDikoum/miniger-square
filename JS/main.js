@@ -1,10 +1,18 @@
 // Générer le QR code
-function updateQr(){
-  const siteUrl = window.location.href; // ✅ Auto
-  const qrUrl = `https://chart.googleapis.com/chart?cht=qr&chs=800x800&chl=${encodeURIComponent(siteUrl)}&chld=L|1`;
-  document.getElementById('qrImage').src = qrUrl;
-}
-updateQr();
+document.addEventListener("DOMContentLoaded", () => {
+  const qrImage = document.getElementById("qrImage");
+  if (qrImage) {
+    const siteUrl = window.location.href; 
+    QRCode.toDataURL(siteUrl, { width: 250 }, function (err, url) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      qrImage.src = url;
+    });
+  }
+});
+
 
 // Carrousel
 const track = document.querySelector('.carousel-track');
